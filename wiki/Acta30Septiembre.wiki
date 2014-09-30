@@ -2,7 +2,7 @@
 
 -Fernando Gualo -Alejandro Gomez.
 
--Enlazar y conectar entre si todos los programas que vamos a necesitar para crear el proyecto, incluyendo GoogleSite?, GoogleCode?, Eclipse, VisualParadigm?. 
+-Enlazar y conectar entre si todos los programas que vamos a necesitar para crear el proyecto, incluyendo GoogleSite, GoogleCode, Eclipse, VisualParadigm. 
 
 Encargados:
 -Alberto Grande -Victor Gualdras.
