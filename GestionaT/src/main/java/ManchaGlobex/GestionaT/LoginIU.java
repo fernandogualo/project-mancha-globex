@@ -6,6 +6,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JPasswordField;
+import javax.swing.JButton;
 
 public class LoginIU {
 
@@ -14,6 +17,9 @@ public class LoginIU {
 	private JLabel lblUsuario;
 	private JLabel lblContrasea;
 	private JLabel lblLogo;
+	private JTextField tfUsuario;
+	private JPasswordField pwdContrasena;
+	private JButton btnIniciarSesin;
 
 	/**
 	 * Launch the application.
@@ -53,18 +59,34 @@ public class LoginIU {
 			panel.setLayout(null);
 			{
 				lblUsuario = new JLabel("Usuario:");
-				lblUsuario.setBounds(179, 74, 45, 26);
+				lblUsuario.setBounds(151, 74, 66, 26);
 				panel.add(lblUsuario);
 			}
 			{
 				lblContrasea = new JLabel("Contraseña");
-				lblContrasea.setBounds(179, 125, 76, 14);
+				lblContrasea.setBounds(151, 125, 83, 14);
 				panel.add(lblContrasea);
 			}
 			{
 				lblLogo = new JLabel(" ");
 				lblLogo.setBounds(43, 86, 46, 14);
 				panel.add(lblLogo);
+			}
+			{
+				tfUsuario = new JTextField();
+				tfUsuario.setBounds(244, 77, 105, 20);
+				panel.add(tfUsuario);
+				tfUsuario.setColumns(10);
+			}
+			{
+				pwdContrasena = new JPasswordField();
+				pwdContrasena.setBounds(244, 122, 105, 20);
+				panel.add(pwdContrasena);
+			}
+			{
+				btnIniciarSesin = new JButton("Iniciar Sesión");
+				btnIniciarSesin.setBounds(198, 164, 151, 50);
+				panel.add(btnIniciarSesin);
 			}
 		}
 	}
