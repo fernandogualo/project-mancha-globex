@@ -3,6 +3,8 @@ package ManchaGlobex.GestionaT.Dominio;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import javax.swing.JTextField;
+
 import com.aeat.valida.Validador;
 
 public class GestorRegistrarse {
@@ -10,27 +12,30 @@ public class GestorRegistrarse {
 	private static final String PATTERN_EMAIL = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 
 
-	public boolean comprobarDNI(String s){
+	public boolean comprobarDNI(JTextField s){
+		
+		String dni=s.getText();
 		boolean result=false;
 		Validador validador = new Validador();
-        int e = validador.checkNif(s);
+        int e = validador.checkNif(dni);
  
         if (e > 0)
         	result=true;
         return result;
 	}
 	
-	public boolean comprobarEmail(String e) {
-		 
+	public boolean comprobarEmail(JTextField e) {
+		String email=e.getText();
         Pattern pattern = Pattern.compile(PATTERN_EMAIL);
         
-        Matcher matcher = pattern.matcher(e);
+        Matcher matcher = pattern.matcher(email);
         return matcher.matches();
     }
 	
-	public boolean comprobarContraseña(String c){
+	public boolean comprobarContrasena(JTextField c){
+		String contrasena=c.getText();
 		boolean result=false;
-		if(c.length()>4){
+		if(contrasena.length()>4){
 			result=true;
 		}
 		
