@@ -6,11 +6,11 @@ public class GestorIngresoDao {
 		
 	}
 	
-	public void modificarGastoIngreso(Gasto g){
+	public void modificarGastoIngreso(GastoIngreso g){
 		
 	}
 	
-	public void eliminarGastoIngreso(Gasto g){
+	public void eliminarGastoIngreso(GastoIngreso g){
 		
 	}
 }
