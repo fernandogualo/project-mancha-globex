@@ -8,7 +8,7 @@ public class UsuarioDAO {
 	}
 
 	public void registrarUsuario() {
-
+			
 	}
 
 	public boolean comprobarLogin(String nombre_usuario, String contrasena) {

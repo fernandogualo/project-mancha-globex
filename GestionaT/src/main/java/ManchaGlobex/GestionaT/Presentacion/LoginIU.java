@@ -1,4 +1,4 @@
-package ManchaGlobex.GestionaT;
+package ManchaGlobex.GestionaT.Presentacion;
 
 import java.awt.EventQueue;
 

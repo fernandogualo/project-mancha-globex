@@ -1,4 +1,4 @@
-package ManchaGlobex.GestionaT;
+package ManchaGlobex.GestionaT.Dominio;
 
 public class Usuario {
 	private String nombre,apellidos,DNI,email,contrasena;
