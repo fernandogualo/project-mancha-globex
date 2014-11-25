@@ -106,7 +106,7 @@ public class IntroducirIngreso {
 			}
 			{
 				btnIntroducirIngreso = new JButton("Introducir Ingreso");
-				btnIntroducirIngreso.setBounds(259, 182, 119, 23);
+				btnIntroducirIngreso.setBounds(244, 171, 138, 38);
 				panel.add(btnIntroducirIngreso);
 			}
 		}
