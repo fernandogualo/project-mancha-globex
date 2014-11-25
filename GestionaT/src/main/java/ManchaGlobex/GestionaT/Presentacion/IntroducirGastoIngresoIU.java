@@ -10,14 +10,15 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import javax.swing.JSeparator;
 
 public class IntroducirGastoIngresoIU {
 
 	private JFrame frame;
 	private JPanel panel;
-	private JButton btnIngresarDeudagasto;
+	private JButton btnIngresarGasto;
 	private JButton btnIngresarDeuda;
-	private JButton btnNewButton;
+	private JButton btnIngresarIngreso;
 	private JLabel lblIngreseUnGasto;
 	private JLabel lblIngreseUnIngreso;
 	private JLabel lblIngreseUnaDeuda;
@@ -60,10 +61,10 @@ public class IntroducirGastoIngresoIU {
 			frame.getContentPane().add(panel, BorderLayout.CENTER);
 			panel.setLayout(null);
 			{
-				btnIngresarDeudagasto = new JButton("Ingresar Gasto");
-				btnIngresarDeudagasto.addActionListener(new BtnIngresarDeudagastoActionListener());
-				btnIngresarDeudagasto.setBounds(247, 45, 154, 23);
-				panel.add(btnIngresarDeudagasto);
+				btnIngresarGasto = new JButton("Ingresar Gasto");
+				btnIngresarGasto.addActionListener(new BtnIngresarDeudagastoActionListener());
+				btnIngresarGasto.setBounds(247, 45, 154, 23);
+				panel.add(btnIngresarGasto);
 			}
 			{
 				btnIngresarDeuda = new JButton("Ingresar Deuda");
@@ -71,9 +72,9 @@ public class IntroducirGastoIngresoIU {
 				panel.add(btnIngresarDeuda);
 			}
 			{
-				btnNewButton = new JButton("Ingresar Ingreso");
-				btnNewButton.setBounds(247, 107, 154, 23);
-				panel.add(btnNewButton);
+				btnIngresarIngreso = new JButton("Ingresar Ingreso");
+				btnIngresarIngreso.setBounds(247, 107, 154, 23);
+				panel.add(btnIngresarIngreso);
 			}
 			{
 				lblIngreseUnGasto = new JLabel("Ingrese un gasto: ");
