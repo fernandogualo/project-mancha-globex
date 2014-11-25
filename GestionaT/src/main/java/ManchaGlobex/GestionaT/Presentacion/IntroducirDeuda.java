@@ -60,7 +60,7 @@ public class IntroducirDeuda {
 			frmIntroducirDeuda.getContentPane().add(panel, BorderLayout.CENTER);
 			{
 				btnIntroducirDeuda = new JButton("Introducir Deuda");
-				btnIntroducirDeuda.setBounds(250, 183, 154, 23);
+				btnIntroducirDeuda.setBounds(254, 171, 157, 46);
 				panel.add(btnIntroducirDeuda);
 			}
 			{
