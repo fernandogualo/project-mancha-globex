@@ -4,7 +4,11 @@ import ManchaGlobex.GestionaT.Presentacion.*;
 import ManchaGlobex.GestionaT.Persistencia.*;
 
 public class UsuarioDAO {
-	private Usuario usuario;
+	private Usuario usuario;	
+
+	public UsuarioDAO(Usuario usuario) {
+		this.usuario = usuario;
+	}
 
 	public UsuarioDAO() {
 

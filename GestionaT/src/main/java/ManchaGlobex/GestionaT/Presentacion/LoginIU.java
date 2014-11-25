@@ -1,5 +1,6 @@
 package ManchaGlobex.GestionaT.Presentacion;
 
+import  ManchaGlobex.GestionaT.Dominio.*;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -9,6 +10,8 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class LoginIU {
 
@@ -19,7 +22,7 @@ public class LoginIU {
 	private JLabel lblLogo;
 	private JTextField tfUsuario;
 	private JPasswordField pwdContrasena;
-	private JButton btnIniciarSesin;
+	private JButton btnIniciarSesion;
 
 	/**
 	 * Launch the application.
@@ -51,7 +54,7 @@ public class LoginIU {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
+		frame.getContentPane().setLayout(null);		
 		{
 			panel = new JPanel();
 			panel.setBounds(0, 0, 434, 261);
@@ -84,10 +87,23 @@ public class LoginIU {
 				panel.add(pwdContrasena);
 			}
 			{
-				btnIniciarSesin = new JButton("Iniciar Sesión");
-				btnIniciarSesin.setBounds(198, 164, 151, 50);
-				panel.add(btnIniciarSesin);
+				btnIniciarSesion = new JButton("Iniciar Sesión");
+				btnIniciarSesion.addActionListener(new BtnIniciarSesinActionListener());
+				btnIniciarSesion.setBounds(198, 164, 151, 50);
+				panel.add(btnIniciarSesion);
 			}
+		}
+	}
+	private class BtnIniciarSesinActionListener implements ActionListener {
+		UsuarioDAO aux= new UsuarioDAO();
+		public void actionPerformed(ActionEvent arg0) {
+			if(tfUsuario.getText() != null && pwdContrasena.getText() != null){				
+				aux.comprobarLogin(tfUsuario.getText(), pwdContrasena.getText());
+				
+				
+			}
+			
+			
 		}
 	}
 }
