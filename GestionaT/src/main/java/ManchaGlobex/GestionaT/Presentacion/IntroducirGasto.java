@@ -106,7 +106,7 @@ public class IntroducirGasto {
 			}
 			{
 				btnIntroducirGasto = new JButton("Introducir Gasto");
-				btnIntroducirGasto.setBounds(259, 182, 119, 23);
+				btnIntroducirGasto.setBounds(234, 170, 147, 36);
 				panel.add(btnIntroducirGasto);
 			}
 		}
