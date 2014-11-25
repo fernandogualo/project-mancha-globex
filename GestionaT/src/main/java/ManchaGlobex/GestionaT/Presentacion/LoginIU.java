@@ -1,15 +1,19 @@
 package ManchaGlobex.GestionaT.Presentacion;
 
 import  ManchaGlobex.GestionaT.Dominio.*;
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+
 import java.awt.BorderLayout;
+
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -116,6 +120,12 @@ public class LoginIU {
 	private class BtnIniciarSesinActionListener implements ActionListener {
 		UsuarioDAO aux= new UsuarioDAO();
 		public void actionPerformed(ActionEvent arg0) {
+			try {
+				ManchaGlobex.GestionaT.Persistencia.AgenteBBDD a=new ManchaGlobex.GestionaT.Persistencia.AgenteBBDD();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} 
 			if(tfUsuario.getText() != null && pwdContrasena.getText() != null){				
 				if(aux.comprobarLogin(tfUsuario.getText(), pwdContrasena.getText())==true){
 					lblResultado.setText("Ha iniciado sesion correctamente.");
