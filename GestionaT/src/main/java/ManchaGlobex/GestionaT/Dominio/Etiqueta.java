@@ -4,9 +4,13 @@ public class Etiqueta {
 	private String nombre, descripcion;
 
 	public Etiqueta(String nombre, String descripcion) {
-		super();
 		this.nombre = nombre;
 		this.descripcion = descripcion;
+	}
+	public Etiqueta(String nombre) {
+		this.nombre = nombre;
+	}
+	public Etiqueta() {
 	}
 
 	public String getNombre() {

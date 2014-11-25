@@ -1,7 +1,10 @@
 package ManchaGlobex.GestionaT.Dominio;
 
 public class EtiquetaDAO {
-	public void crearEtiqueta(){
+	public void crearEtiqueta(String id,String descripcion){
+		
+	}
+public void crearEtiqueta(String id){
 		
 	}
 	public void consultarEtiqueta(){
