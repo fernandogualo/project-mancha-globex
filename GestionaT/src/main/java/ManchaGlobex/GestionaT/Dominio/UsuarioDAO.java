@@ -1,5 +1,8 @@
 package ManchaGlobex.GestionaT.Dominio;
 
+import ManchaGlobex.GestionaT.Presentacion.*;
+import ManchaGlobex.GestionaT.Persistencia.*;
+
 public class UsuarioDAO {
 	private Usuario usuario;
 
@@ -8,6 +11,7 @@ public class UsuarioDAO {
 	}
 
 	public void registrarUsuario() {
+		
 
 	}
 
