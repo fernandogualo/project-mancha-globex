@@ -23,6 +23,9 @@ public class LoginIU {
 	private JTextField tfUsuario;
 	private JPasswordField pwdContrasena;
 	private JButton btnIniciarSesion;
+	private JButton btnRegistrarse;
+	private JLabel lblnoTieneCuenta;
+	private JLabel lblResultado;
 
 	/**
 	 * Launch the application.
@@ -52,7 +55,7 @@ public class LoginIU {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 386, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);		
 		{
@@ -92,17 +95,42 @@ public class LoginIU {
 				btnIniciarSesion.setBounds(198, 164, 151, 50);
 				panel.add(btnIniciarSesion);
 			}
+			{
+				btnRegistrarse = new JButton("Registrarse");
+				btnRegistrarse.addActionListener(new BtnRegistrarseActionListener());
+				btnRegistrarse.setBounds(10, 166, 116, 46);
+				panel.add(btnRegistrarse);
+			}
+			{
+				lblnoTieneCuenta = new JLabel("¿No tiene cuenta? Registrese");
+				lblnoTieneCuenta.setBounds(10, 223, 169, 14);
+				panel.add(lblnoTieneCuenta);
+			}
+			{
+				lblResultado = new JLabel("");
+				lblResultado.setBounds(198, 223, 46, 14);
+				panel.add(lblResultado);
+			}
 		}
 	}
 	private class BtnIniciarSesinActionListener implements ActionListener {
 		UsuarioDAO aux= new UsuarioDAO();
 		public void actionPerformed(ActionEvent arg0) {
 			if(tfUsuario.getText() != null && pwdContrasena.getText() != null){				
-				aux.comprobarLogin(tfUsuario.getText(), pwdContrasena.getText());
-				
-				
+				if(aux.comprobarLogin(tfUsuario.getText(), pwdContrasena.getText())==true){
+					lblResultado.setText("Ha iniciado sesion correctamente.");
+					
+				}
+				lblResultado.setText("Fallo en el inicio de sesion.");
 			}
 			
+			
+		}
+	}
+	private class BtnRegistrarseActionListener implements ActionListener {
+		public void actionPerformed(ActionEvent e) {
+			RegistrateIU reg=new RegistrateIU();
+			reg.main(null);
 			
 		}
 	}
