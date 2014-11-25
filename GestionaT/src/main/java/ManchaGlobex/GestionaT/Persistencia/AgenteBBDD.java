@@ -10,11 +10,11 @@ public class AgenteBBDD {
     
     protected static Connection mBD;
 	
-    private static String url="jdbc:mysql://localhost:3306/GestionaTBBDD";
+    private static String url="jdbc:mysql://localhost/GestionaT";
      
     private static String driver="com.mysql.jdbc.Driver";
     
-    private AgenteBBDD()throws Exception {
+    public AgenteBBDD()throws Exception {
     	conectar();
     		
     }
