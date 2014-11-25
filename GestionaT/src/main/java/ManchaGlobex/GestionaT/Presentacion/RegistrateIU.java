@@ -15,15 +15,15 @@ public class RegistrateIU {
 
 	private JFrame frame;
 	private JPanel panel;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
+	private JTextField txtNombre;
+	private JTextField txtApellidos;
+	private JTextField txtDNI;
+	private JTextField txtEmail;
 	private JLabel lblApellidos;
 	private JLabel lblDni;
 	private JLabel lblCorreoElectrnico;
 	private JLabel lblContrasea;
-	private JTextField textField_4;
+	private JTextField txtContrasena;
 	private JButton btnRegistrarse;
 
 	/**
@@ -63,25 +63,25 @@ public class RegistrateIU {
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
-		textField = new JTextField();
-		textField.setColumns(10);
-		textField.setBounds(198, 30, 111, 20);
-		panel.add(textField);
+		txtNombre = new JTextField();
+		txtNombre.setColumns(10);
+		txtNombre.setBounds(198, 30, 111, 20);
+		panel.add(txtNombre);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(198, 64, 111, 20);
-		panel.add(textField_1);
+		txtApellidos = new JTextField();
+		txtApellidos.setColumns(10);
+		txtApellidos.setBounds(198, 64, 111, 20);
+		panel.add(txtApellidos);
 		
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
-		textField_2.setBounds(198, 95, 111, 20);
-		panel.add(textField_2);
+		txtDNI = new JTextField();
+		txtDNI.setColumns(10);
+		txtDNI.setBounds(198, 95, 111, 20);
+		panel.add(txtDNI);
 		
-		textField_3 = new JTextField();
-		textField_3.setColumns(10);
-		textField_3.setBounds(198, 126, 111, 20);
-		panel.add(textField_3);
+		txtEmail = new JTextField();
+		txtEmail.setColumns(10);
+		txtEmail.setBounds(198, 126, 111, 20);
+		panel.add(txtEmail);
 		
 		JLabel lblNombre = new JLabel("Nombre");
 		lblNombre.setBounds(77, 30, 46, 14);
@@ -103,10 +103,10 @@ public class RegistrateIU {
 		lblContrasea.setBounds(77, 159, 76, 14);
 		panel.add(lblContrasea);
 		
-		textField_4 = new JTextField();
-		textField_4.setColumns(10);
-		textField_4.setBounds(198, 159, 111, 20);
-		panel.add(textField_4);
+		txtContrasena = new JTextField();
+		txtContrasena.setColumns(10);
+		txtContrasena.setBounds(198, 159, 111, 20);
+		panel.add(txtContrasena);
 		{
 			btnRegistrarse = new JButton("Registrarse");
 			btnRegistrarse.setBounds(132, 210, 89, 23);
