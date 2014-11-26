@@ -1,6 +1,6 @@
 package ManchaGlobex.GestionaT.Dominio;
 
-public class GestorGastoIngresoDao {
+public class GastoIngresoDao {
 	
 	public void crearGastoIngreso(){
 		

@@ -1,5 +1,5 @@
 package ManchaGlobex.GestionaT.Presentacion;
-
+import ManchaGlobex.GestionaT.Dominio.*;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -25,6 +25,7 @@ public class RegistrateIU {
 	private JLabel lblContrasea;
 	private JTextField txtContrasena;
 	private JButton btnRegistrarse;
+	private GestorRegistrarse gr;
 
 	/**
 	 * Launch the application.
@@ -109,8 +110,14 @@ public class RegistrateIU {
 		panel.add(txtContrasena);
 		{
 			btnRegistrarse = new JButton("Registrarse");
+			btnRegistrarse.addActionListener(new BtnRegistrarseActionListener());
 			btnRegistrarse.setBounds(132, 210, 89, 23);
 			panel.add(btnRegistrarse);
+		}
+	}
+	private class BtnRegistrarseActionListener implements ActionListener {
+		public void actionPerformed(ActionEvent arg0) {
+			if(gr.comprobarContrasena(txtContrasena) && gr.comprobarEmail(txtEmail) && gr.)
 		}
 	}
 }

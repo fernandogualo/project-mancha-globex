@@ -12,17 +12,6 @@ public class GestorRegistrarse {
 	private static final String PATTERN_EMAIL = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 
 
-	public boolean comprobarDNI(JTextField s){
-		
-		String dni=s.getText();
-		boolean result=false;
-		Validador validador = new Validador();
-        int e = validador.checkNif(dni);
- 
-        if (e > 0)
-        	result=true;
-        return result;
-	}
 	
 	public boolean comprobarEmail(JTextField e) {
 		String email=e.getText();
