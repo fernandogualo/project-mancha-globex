@@ -123,12 +123,12 @@ public class RegistrateIU {
 	}
 	private class BtnRegistrarseActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent arg0) {
-			if(gr.comprobarDNI(txtDNI) && gr.comprobarContrasena(txtContrasena) && gr.comprobarEmail(txtEmail) && gr.comprobarNombre(txtNombre) && gr.comprobarApellido(txtApellidos)){
+			//if(gr.comprobarDNI(txtDNI) && gr.comprobarContrasena(txtContrasena) && gr.comprobarEmail(txtEmail) && gr.comprobarNombre(txtNombre) && gr.comprobarApellido(txtApellidos)){
 				JOptionPane.showMessageDialog(null,"Usuario introducido correctamente"); 
 			}
-			else{
-				JOptionPane.showMessageDialog(null,"Error");
+			//else{
+				//JOptionPane.showMessageDialog(null,"Error");
 			}
-		}
+		//}
 	}
-}
+//}
