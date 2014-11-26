@@ -16,7 +16,7 @@ public class GestorGastoIngreso {
 		return result;
 	}
 	
-	public boolean ComprobarEtiqueta(){
+	public boolean ComprobarEtiqueta(JTextField e){
 		boolean result=false;
 		
 		return result;

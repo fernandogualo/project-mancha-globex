@@ -1,13 +1,19 @@
 package ManchaGlobex.GestionaT.Presentacion;
 import ManchaGlobex.GestionaT.Dominio.*;
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+
 import java.awt.BorderLayout;
+
 import javax.swing.JButton;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 
@@ -25,7 +31,7 @@ public class RegistrateIU {
 	private JLabel lblContrasea;
 	private JTextField txtContrasena;
 	private JButton btnRegistrarse;
-	private GestorRegistrarse gr;
+	private GestorRegistrarse gr=new GestorRegistrarse();
 
 	/**
 	 * Launch the application.
@@ -117,7 +123,12 @@ public class RegistrateIU {
 	}
 	private class BtnRegistrarseActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent arg0) {
-			if(gr.comprobarContrasena(txtContrasena) && gr.comprobarEmail(txtEmail) && gr.)
+			if(gr.comprobarDNI(txtDNI) && gr.comprobarContrasena(txtContrasena) && gr.comprobarEmail(txtEmail) && gr.comprobarNombre(txtNombre) && gr.comprobarApellido(txtApellidos)){
+				JOptionPane.showMessageDialog(null,"Usuario introducido correctamente"); 
+			}
+			else{
+				JOptionPane.showMessageDialog(null,"Error");
+			}
 		}
 	}
 }
