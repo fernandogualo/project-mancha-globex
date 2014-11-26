@@ -123,12 +123,15 @@ public class RegistrateIU {
 	}
 	private class BtnRegistrarseActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent arg0) {
-			//if(gr.comprobarDNI(txtDNI) && gr.comprobarContrasena(txtContrasena) && gr.comprobarEmail(txtEmail) && gr.comprobarNombre(txtNombre) && gr.comprobarApellido(txtApellidos)){
-				JOptionPane.showMessageDialog(null,"Usuario introducido correctamente"); 
+			GestorUsuario gu=new GestorUsuario();
+			try {
+				if(gu.regitrar(txtDNI.getText(),txtNombre.getText(),txtApellidos.getText() , txtEmail.getText(), txtContrasena.getText())==true){
+				JOptionPane.showMessageDialog(null, "Registrado");
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-			//else{
-				//JOptionPane.showMessageDialog(null,"Error");
-			}
-		//}
+		}
 	}
-//}
+}

@@ -19,9 +19,18 @@ public class UsuarioDAO {
 
 	}
 
-	public void registrarUsuario() {
-		
-
+	public boolean registrarUsuario(Usuario user)throws Exception {
+		String SQL="SELECT * FROM gestionat.usuario WHERE DNI='"+user.getDNI()+"';";
+		agente=AgenteBBDD.getAgente();
+		ResultSet rs=agente.select(SQL);
+		rs.next();
+		if(rs.getRow()==0){
+			SQL="insert into usuario value('"+user.getDNI()+"','"+user.getNombre()+"','"+user.getApellidos()+"','"+user.getEmail()+"','"+user.getContrasena()+"');";
+			agente.insert(SQL);
+			return true;
+		}else{
+			return false;
+		}		
 	}
 
 	public boolean comprobarLogin(String nombre_usuario, String contrasena) throws Exception {
