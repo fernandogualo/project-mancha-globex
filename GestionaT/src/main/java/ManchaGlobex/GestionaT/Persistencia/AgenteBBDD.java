@@ -63,17 +63,19 @@ public class AgenteBBDD {
     }
     
     
-	public Vector<Object> select(String SQL) throws SQLException,Exception{
+	public ResultSet select(String SQL) throws SQLException,Exception{
             PreparedStatement stmt=mBD.prepareStatement(SQL);
             ResultSet rs=stmt.executeQuery();
-            Vector<Object> vo=new Vector();
+            /*Vector<Object> vo=new Vector();
             while(rs.next()){
+            	vo.add(rs.)
                 Vector<Object> vu=new Vector();
                 vu.add(rs.getString("login"));
                 vu.add(rs.getString("password"));
                 vo.add(vu);
             }
-            return vo;	
+            return vo;*/
+            return rs;
 	}
 
 }
