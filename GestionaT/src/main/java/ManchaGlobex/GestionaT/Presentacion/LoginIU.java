@@ -118,20 +118,22 @@ public class LoginIU {
 		}
 	}
 	private class BtnIniciarSesinActionListener implements ActionListener {
-		UsuarioDAO aux= new UsuarioDAO();
+		GestorUsuario gu=new GestorUsuario();
 		public void actionPerformed(ActionEvent arg0) {
-			try {
-				ManchaGlobex.GestionaT.Persistencia.AgenteBBDD a=new ManchaGlobex.GestionaT.Persistencia.AgenteBBDD();
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} 
 			if(tfUsuario.getText() != null && pwdContrasena.getText() != null){				
-				if(aux.comprobarLogin(tfUsuario.getText(), pwdContrasena.getText())==true){
-					lblResultado.setText("Ha iniciado sesion correctamente.");
-					
+				try {
+					if(gu.comprobarUsuario(tfUsuario.getText(), pwdContrasena.getText())==true){
+						lblResultado.setText("Ha iniciado sesion correctamente.");
+						MenuIU menu=new MenuIU();
+						menu.main(null);
+						
+					}else{
+						lblResultado.setText("Fallo en el inicio de sesion.");
+					}
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
 				}
-				lblResultado.setText("Fallo en el inicio de sesion.");
 			}
 			
 			
