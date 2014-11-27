@@ -13,11 +13,9 @@ public class DeudaDao {
 		ResultSet rs=agente.select(SQL);
 		rs.next();
 		int id=rs.getInt(1);
-		System.out.println(id);
 		id++;
 		SQL="INSERT INTO gestionat.deuda (idGasto_Ingreso,Cantidad,Etiqueta_tipo) value("+id+","+d.getCantidad()+",'"+LoginIU.DNI+"','"+d.getEtiqueta()+"');";		
 		agente.insert(SQL);
-		agente.desconectar();
 		return true;
 	}
 	

@@ -18,7 +18,6 @@ public class EtiquetaDAO {
 
 		System.out.println(SQL);
 		agente.insert(SQL);
-		agente.desconectar();
 		return true;
 	}
 
@@ -27,7 +26,6 @@ public class EtiquetaDAO {
 		AgenteBBDD agente = AgenteBBDD.getAgente();
 
 		agente.insert(SQL);
-		agente.desconectar();
 		return true;
 
 	}
@@ -40,11 +38,8 @@ public class EtiquetaDAO {
 		ResultSet rs = agente.select(SQL);
 		rs.next();
 		if (rs.getRow() == 0) {
-
-			agente.desconectar();
 			return true;
 		} else {
-			agente.desconectar();
 			return false;
 		}
 	}

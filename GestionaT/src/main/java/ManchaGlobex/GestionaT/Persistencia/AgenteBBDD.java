@@ -64,8 +64,11 @@ public class AgenteBBDD {
     
     
 	public ResultSet select(String SQL) throws SQLException,Exception{
+			conectar();
             PreparedStatement stmt=mBD.prepareStatement(SQL);
             ResultSet rs=stmt.executeQuery();
+            //stmt.close();
+            //desconectar();
             return rs;
 	}
 

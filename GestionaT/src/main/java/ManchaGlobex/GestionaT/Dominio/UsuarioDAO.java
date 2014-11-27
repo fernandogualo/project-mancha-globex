@@ -27,10 +27,8 @@ public class UsuarioDAO {
 			SQL="insert into usuario (DNI,Nombre,Apellidos,email,contrasena) value('"+user.getDNI()+"','"+user.getNombre()+"','"+user.getApellidos()+"','"+user.getEmail()+"','"+user.getContrasena()+"');";
 			System.out.println(SQL);
 			agente.insert(SQL);
-			agente.desconectar();
 			return true;
 		}else{
-			agente.desconectar();
 			return false;
 		}		
 	}
@@ -41,10 +39,8 @@ public class UsuarioDAO {
 		ResultSet rs=agente.select(SQL);
 		rs.next();
 		if(rs.getRow()==0){
-			agente.desconectar();
 			return false;
 		}else{
-			agente.desconectar();
 			return true;
 		}
 	}

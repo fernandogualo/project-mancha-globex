@@ -18,7 +18,6 @@ public class GastoIngresoDao {
 		id++;
 		SQL="INSERT INTO gestionat.gasto_ingreso (idGasto_Ingreso,Cantidad,Etiqueta_tipo,Usuario_dni) value("+id+","+gi.getCantidad()+",'"+gi.getEtiqueta()+"','"+LoginIU.DNI+"');";		
 		agente.insert(SQL);
-		agente.desconectar();
 		return true;
 	}
 	
