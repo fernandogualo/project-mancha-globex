@@ -15,8 +15,7 @@ public class MenuIU {
 
 	private JFrame frame;
 	private JPanel panel;
-	private JButton btnIntroducirGasto;
-	private JButton btnIntroducirIngreso;
+	private JButton btnIntroducirGastoIngreso;
 	private JButton btnIntroducirDeuda;
 	private JButton btnGenerarInformes;
 
@@ -55,26 +54,15 @@ public class MenuIU {
 			frame.getContentPane().add(panel, BorderLayout.CENTER);
 			panel.setLayout(null);
 			{
-				btnIntroducirGasto = new JButton("Introducir Gasto");
-				btnIntroducirGasto.addActionListener(new ActionListener() {
+				btnIntroducirGastoIngreso = new JButton("Introducir Gasto/Ingreso");
+				btnIntroducirGastoIngreso.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent arg0) {
-						IntroducirGasto igasto=new IntroducirGasto();
+						GastoIngresoIU igasto=new GastoIngresoIU();
 						igasto.main(null);
 					}
 				});
-				btnIntroducirGasto.setBounds(43, 25, 329, 47);
-				panel.add(btnIntroducirGasto);
-			}
-			{
-				btnIntroducirIngreso = new JButton("Introducir Ingreso");
-				btnIntroducirIngreso.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-					IntroducirIngreso iingreso= new IntroducirIngreso();
-					iingreso.main(null);
-					}
-				});
-				btnIntroducirIngreso.setBounds(43, 140, 329, 47);
-				panel.add(btnIntroducirIngreso);
+				btnIntroducirGastoIngreso.setBounds(43, 40, 329, 47);
+				panel.add(btnIntroducirGastoIngreso);
 			}
 			{
 				btnIntroducirDeuda = new JButton("Introducir Deuda");
@@ -84,7 +72,7 @@ public class MenuIU {
 					ideuda.main(null);
 					}
 				});
-				btnIntroducirDeuda.setBounds(43, 83, 329, 46);
+				btnIntroducirDeuda.setBounds(43, 122, 329, 46);
 				panel.add(btnIntroducirDeuda);
 			}
 			{
