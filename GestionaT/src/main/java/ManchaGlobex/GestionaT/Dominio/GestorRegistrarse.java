@@ -12,7 +12,7 @@ public class GestorRegistrarse {
 			+ "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 
 	public boolean comprobarDNI(JTextField s) {
-		
+		boolean a;
 		String dni=s.getText();
 		final String letra = "TRWAGMYFPDXBNJZSQVHLCKE";
 		Boolean res = false;
