@@ -33,7 +33,8 @@ public class EtiquetaDAO {
 	}
 
 	public boolean comprobarEtiqueta(String nombre) throws Exception {
-		String SQL = "SELECT * FROM gestionat.etiqueta WHERE Tipo='" + nombre+ "';";
+		String SQL = "SELECT * FROM gestionat.etiqueta WHERE Tipo='" + nombre
+				+ "';";
 		AgenteBBDD agente = AgenteBBDD.getAgente();
 
 		ResultSet rs = agente.select(SQL);
@@ -46,7 +47,6 @@ public class EtiquetaDAO {
 			agente.desconectar();
 			return false;
 		}
-
 	}
 
 	public void consultarEtiqueta() {
