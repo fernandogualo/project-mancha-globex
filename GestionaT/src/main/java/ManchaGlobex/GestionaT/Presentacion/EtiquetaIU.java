@@ -105,7 +105,7 @@ public class EtiquetaIU {
 	private class BtnCrearActionListener implements ActionListener {
 		
 		public void actionPerformed(ActionEvent e) {
-			GestorEtiqueta get;
+			GestorEtiqueta get = null;
 			try {
 				get = new GestorEtiqueta();
 			} catch (Exception e2) {
