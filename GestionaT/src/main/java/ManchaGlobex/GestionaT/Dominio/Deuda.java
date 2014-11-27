@@ -4,17 +4,21 @@ import java.util.Date;
 
 public class Deuda {
 	private double cantidad;
-	private Date fecha;
-	private Etiqueta etiqueta;
-	private int id;
+	private String etiqueta;
+	public String getEtiqueta() {
+		return etiqueta;
+	}
 
-	public Deuda(double cantidad, Date fecha, Etiqueta etiqueta, int id,
-			String destinatatrio) {
-		super();
-		this.cantidad = cantidad;
-		this.fecha = fecha;
+	public void setEtiqueta(String etiqueta) {
 		this.etiqueta = etiqueta;
-		this.id = id;
+	}
+
+	private String destinatario;
+	
+
+	public Deuda(double cantidad, String etiqueta,String destinatatrio) {
+		this.cantidad = cantidad;		
+		this.etiqueta = etiqueta;		
 		this.destinatatrio = destinatatrio;
 	}
 
@@ -28,31 +32,7 @@ public class Deuda {
 		this.cantidad = cantidad;
 	}
 
-	public Date getFecha() {
-		return fecha;
-	}
-
-	public void setFecha(Date fecha) {
-		this.fecha = fecha;
-	}
-
-	public Etiqueta getEtiqueta() {
-		return etiqueta;
-	}
-
-	public void setEtiqueta(Etiqueta etiqueta) {
-		this.etiqueta = etiqueta;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getDestinatatrio() {
+		public String getDestinatatrio() {
 		return destinatatrio;
 	}
 

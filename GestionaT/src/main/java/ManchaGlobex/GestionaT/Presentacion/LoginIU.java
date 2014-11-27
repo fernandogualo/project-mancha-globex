@@ -31,6 +31,7 @@ public class LoginIU {
 	private JButton btnRegistrarse;
 	private JLabel lblnoTieneCuenta;
 	private JLabel lblResultado;
+	public static String DNI;
 
 	/**
 	 * Launch the application.
@@ -46,6 +47,10 @@ public class LoginIU {
 				}
 			}
 		});
+	}
+	
+	public String DNI(){
+		return DNI;
 	}
 
 	/**
@@ -126,6 +131,7 @@ public class LoginIU {
 					if(gu.comprobarUsuario(tfUsuario.getText(), pwdContrasena.getText())==true){
 						//lblResultado.setText("Ha iniciado sesion correctamente.");
 						JOptionPane.showMessageDialog(null, "Se ha iniciado la sesion correctamente.");
+						DNI=tfUsuario.getText();
 						MenuIU menu=new MenuIU();
 						menu.main(null);
 						

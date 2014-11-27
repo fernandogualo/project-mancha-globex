@@ -1,9 +1,24 @@
 package ManchaGlobex.GestionaT.Dominio;
 
+import java.sql.ResultSet;
+
+import ManchaGlobex.GestionaT.Persistencia.AgenteBBDD;
+import ManchaGlobex.GestionaT.Presentacion.LoginIU;
+
 public class DeudaDao {
 	
-	public void crearDeuda(Deuda d){
-		
+	public boolean crearDeuda(Deuda d) throws Exception{
+		String SQL = "SELECT MAX(IdGasto_Ingreso) from gestionat.deuda;";
+		AgenteBBDD agente = AgenteBBDD.getAgente();
+		ResultSet rs=agente.select(SQL);
+		rs.next();
+		int id=rs.getInt(1);
+		System.out.println(id);
+		id++;
+		SQL="INSERT INTO gestionat.deuda (idGasto_Ingreso,Cantidad,Etiqueta_tipo) value("+id+","+d.getCantidad()+",'"+LoginIU.DNI+"','"+d.getEtiqueta()+"');";		
+		agente.insert(SQL);
+		agente.desconectar();
+		return true;
 	}
 	
 	public void modificarDeuda(Deuda d){

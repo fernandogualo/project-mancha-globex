@@ -4,6 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import ManchaGlobex.GestionaT.Persistencia.AgenteBBDD;
+import ManchaGlobex.GestionaT.Presentacion.LoginIU;
 
 public class GastoIngresoDao {
 	
@@ -15,7 +16,7 @@ public class GastoIngresoDao {
 		int id=rs.getInt(1);
 		System.out.println(id);
 		id++;
-		SQL="INSERT INTO gestionat.gasto_ingreso (idGasto_Ingreso,Cantidad,Etiqueta_tipo) value("+id+","+gi.getCantidad()+",'"+gi.getEtiqueta()+"');";		
+		SQL="INSERT INTO gestionat.gasto_ingreso (idGasto_Ingreso,Cantidad,Etiqueta_tipo,Usuario_dni) value("+id+","+gi.getCantidad()+",'"+gi.getEtiqueta()+"','"+LoginIU.DNI+"');";		
 		agente.insert(SQL);
 		agente.desconectar();
 		return true;

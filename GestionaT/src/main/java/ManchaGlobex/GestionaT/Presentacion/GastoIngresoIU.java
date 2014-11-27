@@ -27,10 +27,8 @@ public class GastoIngresoIU {
 	private JFrame frmIntroducirGatoingreso;
 	private JPanel panel;
 	private JLabel lbCantidad;
-	private JLabel lbFecha;
 	private JLabel lbEtiqueta;
 	private JTextField textCantidad;
-	private JTextField textFecha;
 	private JTextField textEtiqueta;
 	private JButton btnIntroducir;
 	private JCheckBox chckbxGasto;
@@ -64,8 +62,8 @@ public class GastoIngresoIU {
 	 */
 	private void initialize() {
 		frmIntroducirGatoingreso = new JFrame();
-		frmIntroducirGatoingreso.setTitle("Introducir Gato/Ingreso");
-		frmIntroducirGatoingreso.setBounds(100, 100, 450, 300);
+		frmIntroducirGatoingreso.setTitle("Introducir Gasto/Ingreso");
+		frmIntroducirGatoingreso.setBounds(100, 100, 337, 300);
 		frmIntroducirGatoingreso.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		{
 			panel = new JPanel();
@@ -77,49 +75,38 @@ public class GastoIngresoIU {
 				panel.add(lbCantidad);
 			}
 			{
-				lbFecha = new JLabel("Fecha");
-				lbFecha.setBounds(29, 69, 83, 14);
-				panel.add(lbFecha);
-			}
-			{
 				lbEtiqueta = new JLabel("Etiqueta");
-				lbEtiqueta.setBounds(29, 100, 83, 14);
+				lbEtiqueta.setBounds(29, 77, 83, 14);
 				panel.add(lbEtiqueta);
 			}
 			{
 				textCantidad = new JTextField();
 				textCantidad.setText("");
 				textCantidad.setColumns(10);
-				textCantidad.setBounds(122, 35, 86, 20);
+				textCantidad.setBounds(122, 35, 138, 20);
 				panel.add(textCantidad);
-			}
-			{
-				textFecha = new JTextField();
-				textFecha.setColumns(10);
-				textFecha.setBounds(122, 66, 86, 20);
-				panel.add(textFecha);							
 			}
 			{
 				textEtiqueta = new JTextField();
 				textEtiqueta.setText("");
 				textEtiqueta.setColumns(10);
-				textEtiqueta.setBounds(122, 97, 86, 20);
+				textEtiqueta.setBounds(122, 74, 138, 20);
 				panel.add(textEtiqueta);
 			}
 			{
 				btnIntroducir = new JButton("Introducir");
 				btnIntroducir.addActionListener(new BtnIntroducirActionListener());
-				btnIntroducir.setBounds(258, 179, 138, 38);
+				btnIntroducir.setBounds(122, 142, 138, 75);
 				panel.add(btnIntroducir);
 			}
 			{
 				chckbxGasto = new JCheckBox("Gasto");
-				chckbxGasto.setBounds(29, 187, 97, 23);
+				chckbxGasto.setBounds(29, 142, 97, 23);
 				panel.add(chckbxGasto);
 			}
 			{
 				chckbxIngreso = new JCheckBox("Ingreso");
-				chckbxIngreso.setBounds(138, 187, 97, 23);
+				chckbxIngreso.setBounds(29, 187, 97, 23);
 				panel.add(chckbxIngreso);
 			}
 		}
