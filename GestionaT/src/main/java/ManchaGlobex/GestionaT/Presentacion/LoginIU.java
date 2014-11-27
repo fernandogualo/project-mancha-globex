@@ -10,6 +10,7 @@ import javax.swing.JPanel;
 import java.awt.BorderLayout;
 
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
@@ -123,12 +124,14 @@ public class LoginIU {
 			if(tfUsuario.getText() != null && pwdContrasena.getText() != null){				
 				try {
 					if(gu.comprobarUsuario(tfUsuario.getText(), pwdContrasena.getText())==true){
-						lblResultado.setText("Ha iniciado sesion correctamente.");
+						//lblResultado.setText("Ha iniciado sesion correctamente.");
+						JOptionPane.showMessageDialog(null, "Se ha iniciado la sesion correctamente.");
 						MenuIU menu=new MenuIU();
 						menu.main(null);
 						
 					}else{
-						lblResultado.setText("Fallo en el inicio de sesion.");
+						//lblResultado.setText("Fallo en el inicio de sesion.");
+						JOptionPane.showMessageDialog(null, "Fallo en el inicio de sesion.");
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
