@@ -3,15 +3,11 @@ package ManchaGlobex.GestionaT.Dominio;
 import javax.swing.JTextField;
 
 public class GestorDeuda {
-	public boolean comprobarCantidad(JTextField c){
+	public boolean comprobarCantidad(JTextField c) throws NumberFormatException{
 		boolean result=false;
 		double cant;
-		try{
-			cant=Double.parseDouble(c.getText());
-		}
-		catch(Exception e){
-			return result;
-		}
+		cant=Double.parseDouble(c.getText());
+		
 		result=true;
 		return result;
 	}
