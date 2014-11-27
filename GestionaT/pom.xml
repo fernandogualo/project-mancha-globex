@@ -21,17 +21,5 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-    	<groupId>ManchaGlobex</groupId>
-    	<artifactId>Iteracion2</artifactId>
-    	<version>0.0.1-SNAPSHOT</version>
-    </dependency>
   </dependencies>
-  <modules>
-  	<module>Iteracion1</module>
-  	<module>Iteracion2</module>
-  	<module>Iteracion3</module>
-  	<module>Iteracion4</module>
-  	<module>Iteracion5</module>
-  </modules>
 </project>
