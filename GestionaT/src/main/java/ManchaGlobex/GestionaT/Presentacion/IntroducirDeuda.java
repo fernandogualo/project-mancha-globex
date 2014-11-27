@@ -14,14 +14,14 @@ public class IntroducirDeuda {
 	private JFrame frmIntroducirDeuda;
 	private JPanel panel;
 	private JButton btnIntroducirDeuda;
-	private JTextField textField;
-	private JLabel label;
-	private JLabel label_1;
-	private JLabel label_2;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JLabel lblDestinatario;
+	private JTextField textCantidad;
+	private JLabel lbCantidad;
+	private JLabel lbFecha;
+	private JTextField textFecha;
+	private JTextField textEtiqueta;
+	private JTextField textDestinatario;
+	private JLabel lbDestinatario;
+	private JLabel lbEtiqueta;
 
 	/**
 	 * Launch the application.
@@ -64,48 +64,48 @@ public class IntroducirDeuda {
 				panel.add(btnIntroducirDeuda);
 			}
 			{
-				textField = new JTextField();
-				textField.setColumns(10);
-				textField.setBounds(154, 46, 86, 20);
-				panel.add(textField);
+				textCantidad = new JTextField();
+				textCantidad.setColumns(10);
+				textCantidad.setBounds(154, 46, 86, 20);
+				panel.add(textCantidad);
 			}
 			{
-				label = new JLabel("Cantidad");
-				label.setBounds(35, 49, 46, 14);
-				panel.add(label);
+				lbCantidad = new JLabel("Cantidad");
+				lbCantidad.setBounds(35, 49, 46, 14);
+				panel.add(lbCantidad);
 			}
 			{
-				label_1 = new JLabel("Fecha");
-				label_1.setBounds(35, 80, 46, 14);
-				panel.add(label_1);
+				lbFecha = new JLabel("Fecha");
+				lbFecha.setBounds(35, 80, 46, 14);
+				panel.add(lbFecha);
 			}
 			{
-				label_2 = new JLabel("Etiqueta");
-				label_2.setBounds(35, 111, 46, 14);
-				panel.add(label_2);
+				lbEtiqueta = new JLabel("Etiqueta");
+				lbEtiqueta.setBounds(35, 111, 46, 14);
+				panel.add(lbEtiqueta);
 			}
 			{
-				textField_1 = new JTextField();
-				textField_1.setColumns(10);
-				textField_1.setBounds(154, 77, 86, 20);
-				panel.add(textField_1);
+				textFecha = new JTextField();
+				textFecha.setColumns(10);
+				textFecha.setBounds(154, 77, 86, 20);
+				panel.add(textFecha);
 			}
 			{
-				textField_2 = new JTextField();
-				textField_2.setColumns(10);
-				textField_2.setBounds(154, 108, 86, 20);
-				panel.add(textField_2);
+				textEtiqueta = new JTextField();
+				textEtiqueta.setColumns(10);
+				textEtiqueta.setBounds(154, 108, 86, 20);
+				panel.add(textEtiqueta);
 			}
 			{
-				textField_3 = new JTextField();
-				textField_3.setBounds(154, 139, 86, 20);
-				panel.add(textField_3);
-				textField_3.setColumns(10);
+				textDestinatario = new JTextField();
+				textDestinatario.setBounds(154, 139, 86, 20);
+				panel.add(textDestinatario);
+				textDestinatario.setColumns(10);
 			}
 			{
-				lblDestinatario = new JLabel("Destinatario");
-				lblDestinatario.setBounds(35, 142, 68, 14);
-				panel.add(lblDestinatario);
+				lbDestinatario = new JLabel("Destinatario");
+				lbDestinatario.setBounds(35, 142, 68, 14);
+				panel.add(lbDestinatario);
 			}
 		}
 	}
