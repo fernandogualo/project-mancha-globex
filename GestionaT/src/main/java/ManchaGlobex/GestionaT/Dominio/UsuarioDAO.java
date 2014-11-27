@@ -24,7 +24,7 @@ public class UsuarioDAO {
 		ResultSet rs=agente.select(SQL);
 		rs.next();
 		if(rs.getRow()==0){
-			SQL="insert into usuario value('"+user.getDNI()+"','"+user.getNombre()+"','"+user.getApellidos()+"','"+user.getEmail()+"','"+user.getContrasena()+"');";
+			SQL="insert into usuario (DNI,Nombre,Apellidos,email,contrasena) value('"+user.getDNI()+"','"+user.getNombre()+"','"+user.getApellidos()+"','"+user.getEmail()+"','"+user.getContrasena()+"');";
 			agente.insert(SQL);
 			agente.desconectar();
 			return true;
