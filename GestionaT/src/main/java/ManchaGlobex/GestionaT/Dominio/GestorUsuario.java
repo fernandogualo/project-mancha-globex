@@ -7,7 +7,7 @@ public class GestorUsuario {
 		return a;
 	}
 	public boolean regitrar(String dni,String nombre_usuario, String apellidos, String email ,String contrasena) throws Exception{
-		Usuario us=new Usuario(dni, nombre_usuario,  apellidos,  email , contrasena);
+		Usuario us=new Usuario(nombre_usuario,  apellidos,dni,  email , contrasena);
 		boolean a = user.registrarUsuario(us);
 		return a;	
 	}	

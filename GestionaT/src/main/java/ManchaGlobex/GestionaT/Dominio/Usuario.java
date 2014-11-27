@@ -3,8 +3,7 @@ package ManchaGlobex.GestionaT.Dominio;
 public class Usuario {
 	private String nombre,apellidos,DNI,email,contrasena;
 
-	public Usuario(String nombre, String apellidos, String dNI, String email,
-			String contrasena) {	
+	public Usuario(String nombre, String apellidos, String dNI, String email,String contrasena) {	
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		DNI = dNI;

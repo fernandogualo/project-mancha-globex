@@ -25,6 +25,7 @@ public class UsuarioDAO {
 		rs.next();
 		if(rs.getRow()==0){
 			SQL="insert into usuario (DNI,Nombre,Apellidos,email,contrasena) value('"+user.getDNI()+"','"+user.getNombre()+"','"+user.getApellidos()+"','"+user.getEmail()+"','"+user.getContrasena()+"');";
+			System.out.println(SQL);
 			agente.insert(SQL);
 			agente.desconectar();
 			return true;
