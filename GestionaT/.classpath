@@ -22,7 +22,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Gualdras/Dropbox/ISO2/BBDD/mysql-connector-java-5.1.34-bin.jar"/>
 	<classpathentry kind="lib" path="jcalendar-1.4.jar"/>
+	<classpathentry kind="lib" path="mysql-connector-java-5.1.34-bin.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
