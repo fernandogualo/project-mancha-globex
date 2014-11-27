@@ -13,6 +13,8 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 
+import ManchaGlobex.GestionaT.Dominio.GestorGastoIngreso;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -29,8 +31,6 @@ public class GastoIngresoIU {
 	private JButton btnIntroducir;
 	private JCheckBox chckbxGasto;
 	private JCheckBox chckbxIngreso;
-	private JLabel lbDestinatario;
-	private JTextField textDestinatario;
 
 	/**
 	 * Launch the application.
@@ -118,32 +118,23 @@ public class GastoIngresoIU {
 				chckbxIngreso.setBounds(138, 187, 97, 23);
 				panel.add(chckbxIngreso);
 			}
-			{
-				lbDestinatario = new JLabel("Destinatario");
-				lbDestinatario.setBounds(29, 131, 83, 14);
-				panel.add(lbDestinatario);
-			}
-			{
-				textDestinatario = new JTextField();
-				textDestinatario.setBounds(122, 128, 86, 20);
-				panel.add(textDestinatario);
-				textDestinatario.setColumns(10);
-			}
 		}
 	}
 	private class BtnIntroducirActionListener implements ActionListener {
+		GestorGastoIngreso ggi= new GestorGastoIngreso();
 		public void actionPerformed(ActionEvent arg0) {
-			if((chckbxGasto.isSelected()==true && chckbxIngreso.isSelected()==true) ||(chckbxGasto.isSelected()==false && chckbxIngreso.isSelected()==false) ){
-				JOptionPane.showMessageDialog(null, "No se puede seleccionar ambas opciones.Seleccione la requerida.");
-				chckbxGasto.setSelected(false);
-				chckbxIngreso.setSelected(false);
-			}else{
-				if(chckbxGasto.isSelected()==true && chckbxIngreso.isSelected()==false){//introducimos un gasto
+			
+			if(ggi.comprobarCantidad(textCantidad) && ggi.ComprobarEtiqueta(textEtiqueta) && textFecha!=null){
+				if((chckbxGasto.isSelected()==true && chckbxIngreso.isSelected()==true) ||(chckbxGasto.isSelected()==false && chckbxIngreso.isSelected()==false) ){
+					JOptionPane.showMessageDialog(null, "No se puede seleccionar ambas opciones.Seleccione la requerida.");
+					chckbxGasto.setSelected(false);
+					chckbxIngreso.setSelected(false);
+				}else{
+					if(chckbxGasto.isSelected()==true && chckbxIngreso.isSelected()==false){//introducimos un gasto										
+					}
+					if(chckbxGasto.isSelected()==false && chckbxIngreso.isSelected()==true){//introducimos un ingreso
 					
-					
-				}
-				if(chckbxGasto.isSelected()==false && chckbxIngreso.isSelected()==true){//introducimos un ingreso
-					
+					}
 				}
 			}
 		}
