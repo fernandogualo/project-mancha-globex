@@ -1,18 +1,25 @@
 package ManchaGlobex.GestionaT.Presentacion;
 import ManchaGlobex.GestionaT.Dominio.*;
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+
 import java.awt.BorderLayout;
+
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JTextArea;
 import javax.swing.JTextPane;
 import javax.swing.JButton;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+
 import javax.swing.border.LineBorder;
+
 import java.awt.Color;
 
 public class EtiquetaIU {
@@ -96,21 +103,48 @@ public class EtiquetaIU {
 		}
 	}
 	private class BtnCrearActionListener implements ActionListener {
-		EtiquetaDAO edao;
+		
 		public void actionPerformed(ActionEvent e) {
+			GestorEtiqueta get;
+			try {
+				get = new GestorEtiqueta();
+			} catch (Exception e2) {
+				// TODO Auto-generated catch block
+				e2.printStackTrace();
+			}
 			if(tfNombre.getText() != null){
 				if(taDescripcion.getText() != null){
 					///falta alguna extructura para comprobar que se ha creao bn
-					edao.crearEtiqueta(tfNombre.getText(),taDescripcion.getText());
-					lblResultado.setText("Se ha creado la etiqueta");
-					
-					
+					try {
+						if(get.regitrarEtiqueta(tfNombre.getText(), taDescripcion.getText())==true){
+							JOptionPane.showMessageDialog(null, "Etiqueta creada");	
+						}else{
+							JOptionPane.showMessageDialog(null, "Fallo al crear etiqueta");
+						}
+						
+					} catch (Exception e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					//lblResultado.setText("Se ha creado la etiqueta");
+										
 				}else{
-					edao.crearEtiqueta(tfNombre.getText());
-					lblResultado.setText("Se ha creado la etiqueta");
+					try {
+						if(get.regitrarEtiqueta(tfNombre.getText())==true){
+							JOptionPane.showMessageDialog(null, "Etiqueta creada");	
+						}else{
+							JOptionPane.showMessageDialog(null, "Fallo al crear etiqueta");
+						}
+						
+					} catch (Exception e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					//lblResultado.setText("Se ha creado la etiqueta");
 				}
 			}else{
-				lblResultado.setText("Fallo en la creacion de la etiqueta");
+				//lblResultado.setText("Fallo en la creacion de la etiqueta");
+				JOptionPane.showMessageDialog(null, "Fallo al crear etiqueta");
 			}
 		}
 	}
