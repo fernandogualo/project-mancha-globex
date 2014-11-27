@@ -1,6 +1,9 @@
 package ManchaGlobex.GestionaT.Presentacion;
 
 import java.awt.EventQueue;
+import java.awt.HeadlessException;
+import java.sql.SQLException;
+import java.util.Date;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -17,6 +20,7 @@ import ManchaGlobex.GestionaT.Dominio.GestorGastoIngreso;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+//import java.sql.Date;
 
 public class GastoIngresoIU {
 
@@ -93,7 +97,7 @@ public class GastoIngresoIU {
 				textFecha = new JTextField();
 				textFecha.setColumns(10);
 				textFecha.setBounds(122, 66, 86, 20);
-				panel.add(textFecha);
+				panel.add(textFecha);							
 			}
 			{
 				textEtiqueta = new JTextField();
@@ -124,16 +128,47 @@ public class GastoIngresoIU {
 		GestorGastoIngreso ggi= new GestorGastoIngreso();
 		public void actionPerformed(ActionEvent arg0) {
 			
-			if(ggi.comprobarCantidad(textCantidad) && ggi.ComprobarEtiqueta(textEtiqueta) && textFecha!=null){
+			if(ggi.comprobarCantidad(textCantidad)){
+				
 				if((chckbxGasto.isSelected()==true && chckbxIngreso.isSelected()==true) ||(chckbxGasto.isSelected()==false && chckbxIngreso.isSelected()==false) ){
 					JOptionPane.showMessageDialog(null, "No se puede seleccionar ambas opciones.Seleccione la requerida.");
 					chckbxGasto.setSelected(false);
 					chckbxIngreso.setSelected(false);
 				}else{
-					if(chckbxGasto.isSelected()==true && chckbxIngreso.isSelected()==false){//introducimos un gasto										
+					if(chckbxGasto.isSelected()==true && chckbxIngreso.isSelected()==false){//introducimos un gasto	
+						double gasto=Double.parseDouble(textCantidad.getText());
+						gasto=gasto*-1;
+						try {
+							if(ggi.introducirGastoIngreso(gasto, textEtiqueta.getText())){
+								JOptionPane.showMessageDialog(null, "Gasto introducido!!");
+							}
+						} catch (HeadlessException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						} catch (SQLException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						} catch (Exception e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
 					}
 					if(chckbxGasto.isSelected()==false && chckbxIngreso.isSelected()==true){//introducimos un ingreso
-					
+						double gasto=Double.parseDouble(textCantidad.getText());
+						try {
+							if(ggi.introducirGastoIngreso(gasto, textEtiqueta.getText())){
+								JOptionPane.showMessageDialog(null, "Ingreso introducido!!");
+							}
+						} catch (HeadlessException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						} catch (SQLException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						} catch (Exception e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
 					}
 				}
 			}

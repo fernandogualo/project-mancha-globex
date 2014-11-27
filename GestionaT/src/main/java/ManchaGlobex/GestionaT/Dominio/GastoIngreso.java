@@ -2,26 +2,24 @@ package ManchaGlobex.GestionaT.Dominio;
 import java.util.Date;
 public class GastoIngreso {
 	
-	private String tipo;
+	
+	private String etiqueta;
 	private double cantidad;
-	private Date fecha;
-	private Etiqueta etiq;
+	//private Date fecha;
+	
 	
 	public GastoIngreso() {
-		super();
+		
 	}
-	public GastoIngreso(String tipo, double cantidad, Date fecha, Etiqueta etiq) {
-		super();
-		this.tipo = tipo;
+	public GastoIngreso( double cantidad,String etiqueta) {		
+		this.etiqueta = etiqueta;
 		this.cantidad = cantidad;
-		this.fecha = fecha;
-		this.etiq = etiq;
 	}
-	public String getTipo() {
-		return tipo;
+	public String getEtiqueta() {
+		return etiqueta;
 	}
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
+	public void setEtiqueta(String etiqueta) {
+		this.etiqueta = etiqueta;
 	}
 	public double getCantidad() {
 		return cantidad;
@@ -29,16 +27,5 @@ public class GastoIngreso {
 	public void setCantidad(double cantidad) {
 		this.cantidad = cantidad;
 	}
-	public Date getFecha() {
-		return fecha;
-	}
-	public void setFecha(Date fecha) {
-		this.fecha = fecha;
-	}
-	public Etiqueta getEtiq() {
-		return etiq;
-	}
-	public void setEtiq(Etiqueta etiq) {
-		this.etiq = etiq;
-	}
+	
 }
