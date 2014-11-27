@@ -10,7 +10,7 @@ public class AgenteBBDD {
     
     protected static Connection mBD;
 	
-    private static String url="jdbc:mysql://212.122.98.107/GestionaT";
+    private static String url="jdbc:mysql://127.0.0.1/GestionaT";
      
     private static String driver="com.mysql.jdbc.Driver";
     
