@@ -17,7 +17,7 @@ public class IUInforme {
 	private JPanel panel;
 	private JTextField tfFechaInicio;
 	private JTextField tfFechaFinal;
-	private Button button;
+	private Button btInformes;
 	private JLabel lblFechaInicio;
 	private JLabel lblFechafinal;
 	private JTable table;
@@ -69,9 +69,9 @@ public class IUInforme {
 				tfFechaFinal.setColumns(10);
 			}
 			{
-				button = new Button("Generar Informes");
-				button.setBounds(286, 42, 105, 43);
-				panel.add(button);
+				btInformes = new Button("Generar Informes");
+				btInformes.setBounds(286, 42, 105, 43);
+				panel.add(btInformes);
 			}
 			{
 				lblFechaInicio = new JLabel("Fecha inicio:");
