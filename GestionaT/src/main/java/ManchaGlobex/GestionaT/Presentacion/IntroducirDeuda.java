@@ -10,6 +10,9 @@ import javax.swing.JTextField;
 import javax.swing.JLabel;
 import java.awt.Component;
 import javax.swing.Box;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import com.toedter.calendar.JCalendar;
 
 public class IntroducirDeuda {
 
@@ -24,6 +27,7 @@ public class IntroducirDeuda {
 	private JTextField textDestinatario;
 	private JLabel lbDestinatario;
 	private JLabel lbEtiqueta;
+	private JCalendar calendar;
 
 	/**
 	 * Launch the application.
@@ -54,7 +58,7 @@ public class IntroducirDeuda {
 	private void initialize() {
 		frmIntroducirDeuda = new JFrame();
 		frmIntroducirDeuda.setTitle("Introducir Deuda");
-		frmIntroducirDeuda.setBounds(100, 100, 450, 278);
+		frmIntroducirDeuda.setBounds(100, 100, 490, 335);
 		frmIntroducirDeuda.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		{
 			panel = new JPanel();
@@ -62,7 +66,8 @@ public class IntroducirDeuda {
 			frmIntroducirDeuda.getContentPane().add(panel, BorderLayout.CENTER);
 			{
 				btnIntroducirDeuda = new JButton("Introducir Deuda");
-				btnIntroducirDeuda.setBounds(254, 171, 157, 46);
+				btnIntroducirDeuda.addActionListener(new BtnIntroducirDeudaActionListener());
+				btnIntroducirDeuda.setBounds(154, 217, 157, 46);
 				panel.add(btnIntroducirDeuda);
 			}
 			{
@@ -109,6 +114,14 @@ public class IntroducirDeuda {
 				lbDestinatario.setBounds(35, 142, 68, 14);
 				panel.add(lbDestinatario);
 			}
+			
+			calendar = new JCalendar();
+			calendar.setBounds(280, 34, 184, 153);
+			panel.add(calendar);
+		}
+	}
+	private class BtnIntroducirDeudaActionListener implements ActionListener {
+		public void actionPerformed(ActionEvent arg0) {
 		}
 	}
 }
