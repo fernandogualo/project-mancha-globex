@@ -14,16 +14,16 @@ public class GastoIngresoIU {
 
 	private JFrame frame;
 	private JPanel panel;
-	private JLabel label_1;
-	private JLabel label_2;
-	private JLabel label_3;
+	private JLabel lbCantidad;
+	private JLabel lbFecha;
+	private JLabel lbEtiqueta;
 	private JTextField textCantidad;
 	private JTextField textFecha;
 	private JTextField textEtiqueta;
 	private JButton btnIntroducir;
 	private JCheckBox chckbxGasto;
 	private JCheckBox chckbxIngreso;
-	private JLabel lblDestinatario;
+	private JLabel lbDestinatario;
 	private JTextField textDestinatario;
 
 	/**
@@ -61,19 +61,19 @@ public class GastoIngresoIU {
 			panel.setLayout(null);
 			frame.getContentPane().add(panel, BorderLayout.CENTER);
 			{
-				label_1 = new JLabel("Cantidad");
-				label_1.setBounds(29, 38, 46, 14);
-				panel.add(label_1);
+				lbCantidad = new JLabel("Cantidad");
+				lbCantidad.setBounds(29, 38, 46, 14);
+				panel.add(lbCantidad);
 			}
 			{
-				label_2 = new JLabel("Fecha");
-				label_2.setBounds(29, 69, 46, 14);
-				panel.add(label_2);
+				lbFecha = new JLabel("Fecha");
+				lbFecha.setBounds(29, 69, 46, 14);
+				panel.add(lbFecha);
 			}
 			{
-				label_3 = new JLabel("Etiqueta");
-				label_3.setBounds(29, 100, 46, 14);
-				panel.add(label_3);
+				lbEtiqueta = new JLabel("Etiqueta");
+				lbEtiqueta.setBounds(29, 100, 46, 14);
+				panel.add(lbEtiqueta);
 			}
 			{
 				textCantidad = new JTextField();
@@ -111,9 +111,9 @@ public class GastoIngresoIU {
 				panel.add(chckbxIngreso);
 			}
 			{
-				lblDestinatario = new JLabel("Destinatario");
-				lblDestinatario.setBounds(29, 131, 70, 14);
-				panel.add(lblDestinatario);
+				lbDestinatario = new JLabel("Destinatario");
+				lbDestinatario.setBounds(29, 131, 70, 14);
+				panel.add(lbDestinatario);
 			}
 			{
 				textDestinatario = new JTextField();
