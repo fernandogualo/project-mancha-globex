@@ -4,11 +4,17 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+
 import java.awt.BorderLayout;
+
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
+
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class GastoIngresoIU {
 
@@ -63,17 +69,17 @@ public class GastoIngresoIU {
 			frmIntroducirGatoingreso.getContentPane().add(panel, BorderLayout.CENTER);
 			{
 				lbCantidad = new JLabel("Cantidad");
-				lbCantidad.setBounds(29, 38, 46, 14);
+				lbCantidad.setBounds(29, 38, 83, 14);
 				panel.add(lbCantidad);
 			}
 			{
 				lbFecha = new JLabel("Fecha");
-				lbFecha.setBounds(29, 69, 46, 14);
+				lbFecha.setBounds(29, 69, 83, 14);
 				panel.add(lbFecha);
 			}
 			{
 				lbEtiqueta = new JLabel("Etiqueta");
-				lbEtiqueta.setBounds(29, 100, 46, 14);
+				lbEtiqueta.setBounds(29, 100, 83, 14);
 				panel.add(lbEtiqueta);
 			}
 			{
@@ -98,6 +104,7 @@ public class GastoIngresoIU {
 			}
 			{
 				btnIntroducir = new JButton("Introducir");
+				btnIntroducir.addActionListener(new BtnIntroducirActionListener());
 				btnIntroducir.setBounds(258, 179, 138, 38);
 				panel.add(btnIntroducir);
 			}
@@ -113,7 +120,7 @@ public class GastoIngresoIU {
 			}
 			{
 				lbDestinatario = new JLabel("Destinatario");
-				lbDestinatario.setBounds(29, 131, 70, 14);
+				lbDestinatario.setBounds(29, 131, 83, 14);
 				panel.add(lbDestinatario);
 			}
 			{
@@ -121,6 +128,23 @@ public class GastoIngresoIU {
 				textDestinatario.setBounds(122, 128, 86, 20);
 				panel.add(textDestinatario);
 				textDestinatario.setColumns(10);
+			}
+		}
+	}
+	private class BtnIntroducirActionListener implements ActionListener {
+		public void actionPerformed(ActionEvent arg0) {
+			if((chckbxGasto.isSelected()==true && chckbxIngreso.isSelected()==true) ||(chckbxGasto.isSelected()==false && chckbxIngreso.isSelected()==false) ){
+				JOptionPane.showMessageDialog(null, "No se puede seleccionar ambas opciones.Seleccione la requerida.");
+				chckbxGasto.setSelected(false);
+				chckbxIngreso.setSelected(false);
+			}else{
+				if(chckbxGasto.isSelected()==true && chckbxIngreso.isSelected()==false){//introducimos un gasto
+					
+					
+				}
+				if(chckbxGasto.isSelected()==false && chckbxIngreso.isSelected()==true){//introducimos un ingreso
+					
+				}
 			}
 		}
 	}
