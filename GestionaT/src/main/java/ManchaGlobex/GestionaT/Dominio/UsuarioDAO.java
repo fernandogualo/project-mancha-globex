@@ -16,7 +16,6 @@ public class UsuarioDAO {
 	}
 
 	public UsuarioDAO() {
-
 	}
 
 	public boolean registrarUsuario(Usuario user)throws Exception {
@@ -27,8 +26,10 @@ public class UsuarioDAO {
 		if(rs.getRow()==0){
 			SQL="insert into usuario value('"+user.getDNI()+"','"+user.getNombre()+"','"+user.getApellidos()+"','"+user.getEmail()+"','"+user.getContrasena()+"');";
 			agente.insert(SQL);
+			agente.desconectar();
 			return true;
 		}else{
+			agente.desconectar();
 			return false;
 		}		
 	}
@@ -39,8 +40,10 @@ public class UsuarioDAO {
 		ResultSet rs=agente.select(SQL);
 		rs.next();
 		if(rs.getRow()==0){
+			agente.desconectar();
 			return false;
 		}else{
+			agente.desconectar();
 			return true;
 		}
 	}
