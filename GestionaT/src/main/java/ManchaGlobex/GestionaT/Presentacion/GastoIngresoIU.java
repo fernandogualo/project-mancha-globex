@@ -12,7 +12,7 @@ import javax.swing.JCheckBox;
 
 public class GastoIngresoIU {
 
-	private JFrame frame;
+	private JFrame frmIntroducirGatoingreso;
 	private JPanel panel;
 	private JLabel lbCantidad;
 	private JLabel lbFecha;
@@ -34,7 +34,7 @@ public class GastoIngresoIU {
 			public void run() {
 				try {
 					GastoIngresoIU window = new GastoIngresoIU();
-					window.frame.setVisible(true);
+					window.frmIntroducirGatoingreso.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -53,13 +53,14 @@ public class GastoIngresoIU {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmIntroducirGatoingreso = new JFrame();
+		frmIntroducirGatoingreso.setTitle("Introducir Gato/Ingreso");
+		frmIntroducirGatoingreso.setBounds(100, 100, 450, 300);
+		frmIntroducirGatoingreso.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		{
 			panel = new JPanel();
 			panel.setLayout(null);
-			frame.getContentPane().add(panel, BorderLayout.CENTER);
+			frmIntroducirGatoingreso.getContentPane().add(panel, BorderLayout.CENTER);
 			{
 				lbCantidad = new JLabel("Cantidad");
 				lbCantidad.setBounds(29, 38, 46, 14);
