@@ -64,7 +64,7 @@ public class GastoIngresoIU {
 		frmIntroducirGatoingreso = new JFrame();
 		frmIntroducirGatoingreso.setTitle("Introducir Gasto/Ingreso");
 		frmIntroducirGatoingreso.setBounds(100, 100, 337, 300);
-		frmIntroducirGatoingreso.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmIntroducirGatoingreso.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		{
 			panel = new JPanel();
 			panel.setLayout(null);

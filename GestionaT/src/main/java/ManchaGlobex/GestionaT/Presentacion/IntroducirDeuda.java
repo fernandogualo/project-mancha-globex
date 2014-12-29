@@ -71,7 +71,7 @@ public class IntroducirDeuda {
 		frmIntroducirDeuda = new JFrame();
 		frmIntroducirDeuda.setTitle("Introducir Deuda");
 		frmIntroducirDeuda.setBounds(100, 100, 403, 335);
-		frmIntroducirDeuda.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmIntroducirDeuda.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		{
 			panel = new JPanel();
 			panel.setLayout(null);
