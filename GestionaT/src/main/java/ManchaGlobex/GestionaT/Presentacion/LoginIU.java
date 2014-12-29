@@ -133,6 +133,7 @@ public class LoginIU {
 						JOptionPane.showMessageDialog(null, "Se ha iniciado la sesion correctamente.");
 						DNI=tfUsuario.getText();
 						MenuIU menu=new MenuIU();
+						frame.setVisible(false);
 						menu.main(null);
 						
 					}else{
