@@ -17,9 +17,11 @@ import javax.swing.JButton;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
 
 public class LoginIU {
 
+	private int cont=0;
 	private JFrame frame;
 	private JPanel panel;
 	private JLabel lblUsuario;
@@ -32,6 +34,7 @@ public class LoginIU {
 	private JLabel lblnoTieneCuenta;
 	private JLabel lblResultado;
 	public static String DNI;
+	private JLabel lblFallo;
 
 	/**
 	 * Launch the application.
@@ -121,6 +124,13 @@ public class LoginIU {
 				lblResultado.setBounds(198, 223, 46, 14);
 				panel.add(lblResultado);
 			}
+			{
+				lblFallo = new JLabel("Ha fallado 3 veces, por favor espere 20 segudos");
+				lblFallo.setVisible(false);
+				lblFallo.setForeground(Color.RED);
+				lblFallo.setBounds(96, 37, 253, 14);
+				panel.add(lblFallo);
+			}
 		}
 	}
 	private class BtnIniciarSesinActionListener implements ActionListener {
@@ -129,6 +139,7 @@ public class LoginIU {
 			if(tfUsuario.getText() != null && pwdContrasena.getText() != null){				
 				try {
 					if(gu.comprobarUsuario(tfUsuario.getText(), pwdContrasena.getText())==true){
+						cont=0;
 						//lblResultado.setText("Ha iniciado sesion correctamente.");
 						JOptionPane.showMessageDialog(null, "Se ha iniciado la sesion correctamente.");
 						DNI=tfUsuario.getText();
@@ -138,7 +149,11 @@ public class LoginIU {
 						
 					}else{
 						//lblResultado.setText("Fallo en el inicio de sesion.");
+						cont++;
 						JOptionPane.showMessageDialog(null, "Fallo en el inicio de sesion.");
+						if(cont>=2){
+							bloquear();
+						}
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
@@ -148,6 +163,18 @@ public class LoginIU {
 			
 			
 		}
+	}
+	private void bloquear(){
+		lblFallo.setVisible(true);
+		JOptionPane.showMessageDialog(null, "Ha superado el numero de intentos fallidos, por favor espere antes de volver a intentarlo.");
+		try {
+			Thread.sleep(20000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		lblFallo.setVisible(false);
+		cont=0;		
 	}
 	private class BtnRegistrarseActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
