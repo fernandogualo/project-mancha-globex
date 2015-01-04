@@ -1,4 +1,4 @@
-package ManchaGlobex.GestionaT.Persistencia;
+package Persistencia;
 import java.awt.List;
 import java.sql.*;
 import java.util.LinkedList;
@@ -67,8 +67,8 @@ public class AgenteBBDD {
 			conectar();
             PreparedStatement stmt=mBD.prepareStatement(SQL);
             ResultSet rs=stmt.executeQuery();
-            stmt.close();
-            desconectar();
+            //stmt.close();
+            //desconectar();
             return rs;
 	}
 

@@ -1,6 +1,7 @@
 package dominio;
 
 import java.sql.ResultSet;
+import Persistencia.*;
 
 public class EtiquetaDAO {
 	private Etiqueta et;
@@ -14,13 +15,13 @@ public class EtiquetaDAO {
 				+ "','" + et.getDescripcion() + "');";
 		AgenteBBDD agente = AgenteBBDD.getAgente();
 
-		System.out.println(SQL);
 		agente.insert(SQL);
 		return true;
 	}
 
 	public boolean crearEtiquetasd(Etiqueta et) throws Exception {
-		String SQL = "insert into etiqueta value('" + et.getNombre() + "');";
+		String SQL = "insert into gestionat.etiqueta value('" + et.getNombre()
+				+ "','');";
 		AgenteBBDD agente = AgenteBBDD.getAgente();
 
 		agente.insert(SQL);
@@ -40,13 +41,5 @@ public class EtiquetaDAO {
 		} else {
 			return false;
 		}
-	}
-
-	public void consultarEtiqueta() {
-
-	}
-
-	public void borrarEtiqueta(Etiqueta etiqueta) {
-
 	}
 }

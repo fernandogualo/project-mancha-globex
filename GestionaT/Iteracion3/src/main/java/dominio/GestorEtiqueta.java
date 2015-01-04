@@ -24,7 +24,7 @@ public class GestorEtiqueta {
 		boolean a;
 		if(edao.comprobarEtiqueta(nombre)==true){
 			Etiqueta et=new Etiqueta(nombre);		
-			a = edao.crearEtiqueta(et);
+			a = edao.crearEtiquetasd(et);
 		}else{
 			a=false;
 		}
