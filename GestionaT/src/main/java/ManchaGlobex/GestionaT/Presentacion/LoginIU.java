@@ -161,7 +161,7 @@ public class LoginIU {
 						//lblResultado.setText("Fallo en el inicio de sesion.");
 						cont++;
 						JOptionPane.showMessageDialog(null, "Fallo en el inicio de sesion.");
-						if(cont>=2){
+						if(cont>=3){
 							bloquear();
 						}
 					}

@@ -19,11 +19,6 @@ public class GestorDeuda {
 		return result;
 	}
 	
-	public boolean ComprobarEtiqueta(){
-		boolean result=false;
-		
-		return result;
-	}
 	public boolean introducirDeuda(double cantidad, String etiqueta,String destinatario) throws SQLException, Exception{		
 		Deuda d=new Deuda(cantidad,etiqueta,destinatario);
 		boolean a=ddao.crearDeuda(d);

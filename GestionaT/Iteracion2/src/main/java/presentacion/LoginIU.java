@@ -1,25 +1,21 @@
-package ManchaGlobex.GestionaT.Presentacion;
+package presentacion;
 
-import  ManchaGlobex.GestionaT.Dominio.*;
-
+import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-
-import java.awt.BorderLayout;
-
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JTextField;
+import javax.swing.JPanel;
 import javax.swing.JPasswordField;
-import javax.swing.JButton;
+import javax.swing.JTextField;
 
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.awt.Color;
-import javax.swing.ImageIcon;
-import java.awt.Font;
+import Dominio.GestorUsuario;
 
 public class LoginIU {
 
@@ -153,9 +149,9 @@ public class LoginIU {
 						//lblResultado.setText("Ha iniciado sesion correctamente.");
 						JOptionPane.showMessageDialog(null, "Se ha iniciado la sesion correctamente.");
 						DNI=tfUsuario.getText();
-						MenuIU menu=new MenuIU();
+						//MenuIU menu=new MenuIU();
 						frmGestionat.setVisible(false);
-						menu.main(null);
+						//menu.main(null);
 						
 					}else{
 						//lblResultado.setText("Fallo en el inicio de sesion.");
@@ -188,8 +184,8 @@ public class LoginIU {
 	}
 	private class BtnRegistrarseActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
-			RegistrateIU reg=new RegistrateIU();
-			reg.main(null);
+			//RegistrateIU reg=new RegistrateIU();
+			//reg.main(null);
 			
 		}
 	}

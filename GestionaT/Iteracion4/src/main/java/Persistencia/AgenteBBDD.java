@@ -1,4 +1,4 @@
-package ManchaGlobex.GestionaT.Persistencia;
+package Persistencia;
 import java.awt.List;
 import java.sql.*;
 import java.util.LinkedList;
@@ -10,7 +10,7 @@ public class AgenteBBDD {
     
     protected static Connection mBD;
 	
-    private static String url="jdbc:mysql://85.48.144.141:3306/GestionaT";
+    private static String url="jdbc:mysql://localhost:3306/GestionaT";
      
     private static String driver="com.mysql.jdbc.Driver";
     
