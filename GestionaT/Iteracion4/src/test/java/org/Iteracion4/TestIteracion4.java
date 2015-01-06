@@ -30,6 +30,14 @@ public class TestIteracion4 {
 	}
 	
 	@Test
+	public void TestIntroducirDeuda2() throws Exception{
+		GestorDeuda gd=new GestorDeuda();
+		boolean a;
+		a=gd.introducirDeuda(1000, "b", "prueba");
+		assertTrue(a==true);
+	}
+	
+	@Test
 	public void TestcomprobarCantidad2() throws Exception{
 		GestorGastoIngreso ggi=new GestorGastoIngreso();
 		boolean a= ggi.comprobarCantidad(new JTextField("1000"));
