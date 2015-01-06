@@ -29,18 +29,7 @@ public class TestIteracion4 {
 		assertTrue(a==true);
 	}
 	
-	@Test
-	public void TestIntroducirDeuda2() throws Exception{
-		GestorDeuda gd=new GestorDeuda();
-		boolean a;
-		try{
-			a=gd.introducirDeuda(1000, "b", "prueba");
-		}catch(Exception e){}
-		finally{
-			assertFalse(false);
-		}
-		
-	}
+	
 	
 	@Test
 	public void TestcomprobarCantidad2() throws Exception{

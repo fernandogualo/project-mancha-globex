@@ -3,8 +3,7 @@ package Dominio;
 
 import java.sql.ResultSet;
 
-import presentacion.*;
-import Persistencia.*;
+import Persistencia.AgenteBBDD;
 
 public class UsuarioDAO {
 	private Usuario usuario;
@@ -25,6 +24,7 @@ public class UsuarioDAO {
 		rs.next();
 		if(rs.getRow()==0){
 			SQL="insert into usuario (DNI,Nombre,Apellidos,email,contrasena) value('"+user.getDNI()+"','"+user.getNombre()+"','"+user.getApellidos()+"','"+user.getEmail()+"','"+user.getContrasena()+"');";
+			System.out.println(SQL);
 			agente.insert(SQL);
 			return true;
 		}else{

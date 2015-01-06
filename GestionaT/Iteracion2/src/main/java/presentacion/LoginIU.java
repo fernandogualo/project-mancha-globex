@@ -149,15 +149,15 @@ public class LoginIU {
 						//lblResultado.setText("Ha iniciado sesion correctamente.");
 						JOptionPane.showMessageDialog(null, "Se ha iniciado la sesion correctamente.");
 						DNI=tfUsuario.getText();
-						//MenuIU menu=new MenuIU();
+						MenuIU menu=new MenuIU();
 						frmGestionat.setVisible(false);
-						//menu.main(null);
+						menu.main(null);
 						
 					}else{
 						//lblResultado.setText("Fallo en el inicio de sesion.");
 						cont++;
 						JOptionPane.showMessageDialog(null, "Fallo en el inicio de sesion.");
-						if(cont>=2){
+						if(cont>=3){
 							bloquear();
 						}
 					}

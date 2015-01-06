@@ -3,8 +3,7 @@ package Dominio;
 
 import java.sql.ResultSet;
 
-import Presentacion.*;
-import Persistencia.*;
+import Persistencia.AgenteBBDD;
 
 public class UsuarioDAO {
 	private Usuario usuario;

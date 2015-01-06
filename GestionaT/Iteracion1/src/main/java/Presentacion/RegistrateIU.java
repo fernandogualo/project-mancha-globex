@@ -1,21 +1,17 @@
 package Presentacion;
-import Dominio.*;
-
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-
-import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
-
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-
-import javax.swing.JTextField;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+import Dominio.GestorRegistrarse;
+import Dominio.GestorUsuario;
 
 public class RegistrateIU {
 
@@ -77,7 +73,7 @@ public class RegistrateIU {
 		
 		txtApellidos = new JTextField();
 		txtApellidos.setColumns(10);
-		txtApellidos.setBounds(198, 64, 111, 20);
+		txtApellidos.setBounds(198, 64, 155, 20);
 		panel.add(txtApellidos);
 		
 		txtDNI = new JTextField();

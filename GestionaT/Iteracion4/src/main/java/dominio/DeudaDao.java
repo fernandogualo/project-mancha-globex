@@ -17,4 +17,12 @@ public class DeudaDao {
 		agente.insert(SQL);
 		return true;
 	}
+	
+	public void modificarDeuda(Deuda d){
+		
+	}
+	
+	public void borrarDeuda(Deuda d){
+		
+	}
 }

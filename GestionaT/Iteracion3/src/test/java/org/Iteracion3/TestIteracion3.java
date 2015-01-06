@@ -17,7 +17,7 @@ public class TestIteracion3 {
 	public void TestBorrarEtiqueta() throws Exception{
 		GestorEtiqueta ge=new GestorEtiqueta();
 		boolean a= ge.comprobarEtiqueta("prueba2");
-		System.out.println("5");
+
 		assertFalse(a==true);
 	}
 	
@@ -25,7 +25,7 @@ public class TestIteracion3 {
 	public void TestregitrarEtiqueta() throws Exception{
 		String SQL="DELETE FROM gestionat.etiqueta WHERE TIPO='prueba';";
 		AgenteBBDD agente=AgenteBBDD.getAgente();
-		System.out.println("3");
+
 		int rs=agente.delete(SQL);
 		boolean a;
 		if(rs==0){
@@ -36,33 +36,35 @@ public class TestIteracion3 {
 		assertTrue(a==true);
 	}
 	
-	@Test
-	public void TestBorrarEtiqueta2() throws Exception{
-		GestorEtiqueta ge=new GestorEtiqueta();
-		boolean a;		
-		a=ge.regitrarEtiqueta("prueba2");
-		System.out.println("2");
-		assertTrue(a==true);
-	}
 	
 	@Test
 	public void TestregitrarEtiqueta2() throws Exception{
 		GestorEtiqueta ge=new GestorEtiqueta();
 		boolean a;
 		a=ge.regitrarEtiqueta("prueba", "prueba");
-		System.out.println("4");
+
 		assertTrue(a==true);
 	}
+	
+	@Test
+	public void TestregitrarEtiqueta3() throws Exception{
+		GestorEtiqueta ge=new GestorEtiqueta();
+		boolean a;
+		a=ge.regitrarEtiqueta("prueba2");
+
+		assertTrue(a==true);
+	}
+	
 	
 	@Test
 	public void TestcomprobarEtiqueta() throws Exception{
 		String SQL="DELETE FROM gestionat.etiqueta WHERE TIPO='prueba2';";
 		AgenteBBDD agente=AgenteBBDD.getAgente();
-		System.out.println("1");
+
 		int rs=agente.delete(SQL);
 		boolean a;
 		if(rs==0){
-			a= false;
+			a= true;
 		}else{
 			a=true;
 		}
