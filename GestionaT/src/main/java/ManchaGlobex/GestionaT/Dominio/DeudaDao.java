@@ -8,13 +8,13 @@ import ManchaGlobex.GestionaT.Presentacion.LoginIU;
 public class DeudaDao {
 	
 	public boolean crearDeuda(Deuda d) throws Exception{
-		String SQL = "SELECT MAX(IdGasto_Ingreso) from gestionat.deuda;";
+		String SQL = "SELECT MAX(idDeuda) from gestionat.deuda;";
 		AgenteBBDD agente = AgenteBBDD.getAgente();
 		ResultSet rs=agente.select(SQL);
 		rs.next();
 		int id=rs.getInt(1);
 		id++;
-		SQL="INSERT INTO gestionat.deuda (idGasto_Ingreso,Cantidad,Etiqueta_tipo) value("+id+","+d.getCantidad()+",'"+LoginIU.DNI+"','"+d.getEtiqueta()+"');";		
+		SQL="INSERT INTO gestionat.deuda (idDeuda,Cantidad,Etiqueta_tipo,Adeudor,Usuario_DNI) value("+id+","+d.getCantidad()+",'"+d.getEtiqueta()+"','"+d.getDestinatatrio()+"','1');";		
 		agente.insert(SQL);
 		return true;
 	}
