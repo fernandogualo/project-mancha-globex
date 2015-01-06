@@ -54,8 +54,8 @@ public class MenuIU {
 				btnIntroducirGastoIngreso = new JButton("Introducir Gasto/Ingreso");
 				btnIntroducirGastoIngreso.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent arg0) {
-						GastoIngresoIU igasto=new GastoIngresoIU();
-						igasto.main(null);
+						//GastoIngresoIU igasto=new GastoIngresoIU();
+						//igasto.main(null);
 					}
 				});
 				btnIntroducirGastoIngreso.setBounds(43, 40, 329, 47);
@@ -65,8 +65,8 @@ public class MenuIU {
 				btnIntroducirDeuda = new JButton("Introducir Deuda");
 				btnIntroducirDeuda.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-					IntroducirDeuda ideuda=new IntroducirDeuda();
-					ideuda.main(null);
+					//IntroducirDeuda ideuda=new IntroducirDeuda();
+					//ideuda.main(null);
 					}
 				});
 				btnIntroducirDeuda.setBounds(43, 122, 329, 46);

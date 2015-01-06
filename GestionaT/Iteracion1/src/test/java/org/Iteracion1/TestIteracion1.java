@@ -2,6 +2,8 @@ package org.Iteracion1;
 
 import static org.junit.Assert.*;
 
+import java.sql.ResultSet;
+
 import javax.swing.JTextField;
 
 import org.junit.Test;
@@ -38,6 +40,21 @@ public class TestIteracion1 {
 		GestorUsuario gu=new GestorUsuario();
 		boolean res=gu.comprobarUsuario("1", "1234");
 		assertTrue(res==true);
+	}
+	
+	
+	@Test
+	public void TestBorrarUsuario() throws Exception{
+		String SQL="DELETE FROM gestionat.usuario WHERE DNI='prueba2';";
+		AgenteBBDD agente=AgenteBBDD.getAgente();
+		int rs=agente.delete(SQL);
+		boolean a;
+		if(rs==0){
+			a= false;
+		}else{
+			a=true;
+		}
+		assertTrue(a==true);
 	}
 	
 	@Test
