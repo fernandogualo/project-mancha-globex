@@ -77,7 +77,7 @@ public class RegistrateIU {
 		
 		txtApellidos = new JTextField();
 		txtApellidos.setColumns(10);
-		txtApellidos.setBounds(198, 64, 111, 20);
+		txtApellidos.setBounds(198, 64, 155, 20);
 		panel.add(txtApellidos);
 		
 		txtDNI = new JTextField();

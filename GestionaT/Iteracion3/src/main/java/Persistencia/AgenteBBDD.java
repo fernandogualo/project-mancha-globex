@@ -48,8 +48,8 @@ public class AgenteBBDD {
     public int delete(String SQL) throws SQLException,Exception{
     	PreparedStatement stmt = mBD.prepareStatement(SQL);
     	int res=stmt.executeUpdate();
-    	stmt.close();
-    	desconectar();
+    	//stmt.close();
+    	//desconectar();
     	return res;
     }
     

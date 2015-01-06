@@ -106,7 +106,7 @@ public class IntroducirDeuda {
 			}
 			{
 				textDestinatario = new JTextField();
-				textDestinatario.setBounds(154, 122, 119, 20);
+				textDestinatario.setBounds(154, 122, 223, 20);
 				panel.add(textDestinatario);
 				textDestinatario.setColumns(10);
 			}
