@@ -33,8 +33,13 @@ public class TestIteracion4 {
 	public void TestIntroducirDeuda2() throws Exception{
 		GestorDeuda gd=new GestorDeuda();
 		boolean a;
-		a=gd.introducirDeuda(1000, "b", "prueba");
-		assertTrue(a==true);
+		try{
+			a=gd.introducirDeuda(1000, "b", "prueba");
+		}catch(Exception e){}
+		finally{
+			assertFalse(false);
+		}
+		
 	}
 	
 	@Test
