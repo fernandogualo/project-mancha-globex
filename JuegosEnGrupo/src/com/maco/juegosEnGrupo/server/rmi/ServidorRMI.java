@@ -1,5 +1,5 @@
 package com.maco.juegosEnGrupo.server.rmi;
-
+/*
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.rmi.AlreadyBoundException;
@@ -53,9 +53,5 @@ public class ServidorRMI extends UnicastRemoteObject implements IServidorRMI {
 		// TODO Auto-generated method stub
 		
 	}
-	
-	
-	
-	
-
 }
+*/

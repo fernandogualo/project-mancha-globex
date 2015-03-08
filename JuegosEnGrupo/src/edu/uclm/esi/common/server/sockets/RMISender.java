@@ -1,5 +1,5 @@
 package edu.uclm.esi.common.server.sockets;
-
+/*
 import java.rmi.RemoteException;
 
 import edu.uclm.esi.common.server.domain.User;
@@ -18,3 +18,4 @@ public class RMISender extends Sender {
 	}
 
 }
+*/

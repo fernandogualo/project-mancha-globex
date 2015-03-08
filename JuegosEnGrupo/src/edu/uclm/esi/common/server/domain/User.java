@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.maco.clienteRMI.dominio.IClienteRMI;
+//import com.maco.clienteRMI.dominio.IClienteRMI;
 
 import edu.uclm.esi.common.server.persistence.DAOUser;
 
@@ -17,7 +17,7 @@ public class User {
 	private Connection db;
 	private String ip;
 	private String userType;
-	private IClienteRMI clienteRMI;
+	//private IClienteRMI clienteRMI;
 
 	public User() {
 	}
@@ -89,6 +89,7 @@ public class User {
 		return this.ip;
 	}
 	
+	/*
 	public void setClienteRMI(IClienteRMI cliente){
 		this.clienteRMI=cliente;
 	}
@@ -96,6 +97,6 @@ public class User {
 	public IClienteRMI getClienteRMI() {
 		return clienteRMI;
 	}
-	
+	*/
 	
 }

@@ -11,7 +11,7 @@ public abstract class Sender {
 		else if (userType.equals(JSONMessage.USER_GWT))
 			return new GWTSender();
 		else if(userType.equals(JSONMessage.USER_RMI)){
-			return new RMISender();
+			//return new RMISender();
 		}
 		return null;
 	}
