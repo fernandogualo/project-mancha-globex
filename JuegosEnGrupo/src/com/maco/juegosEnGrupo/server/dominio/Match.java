@@ -61,4 +61,11 @@ public abstract class Match {
 	protected abstract void postMove(User user, JSONObject jsoMovement) throws Exception;
 
 	protected abstract void updateBoard(int row, int col, JSONMessage result) throws JSONException, IOException;
+
+	protected void updateBoard(JSONMessage result) throws JSONException,
+			IOException {
+		// TODO Auto-generated method stub
+		
+	}
+	
 }

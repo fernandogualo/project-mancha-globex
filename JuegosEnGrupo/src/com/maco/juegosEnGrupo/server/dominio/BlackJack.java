@@ -1,17 +1,20 @@
 package com.maco.juegosEnGrupo.server.dominio;
 
 import java.io.IOException;
+import java.util.Vector;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.grande.blackjack.jsonMessages.BlackJackMovement;
+import com.grande.blackjack.jsonMessages.BlackJackWaitingMessage;
 import com.grande.blackjack.jsonMessages.Black_JackBoardMessage;
-import com.maco.tresenraya.jsonMessages.BlackJackWaitingMessage;
 import com.maco.tresenraya.jsonMessages.TresEnRayaBoardMessage;
 import com.maco.tresenraya.jsonMessages.TresEnRayaMovement;
 import com.maco.tresenraya.jsonMessages.TresEnRayaWaitingMessage;
 
 import edu.uclm.esi.common.jsonMessages.JSONMessage;
+import edu.uclm.esi.common.server.domain.BlackJackUser;
 import edu.uclm.esi.common.server.domain.User;
 import edu.uclm.esi.common.server.sockets.Notifier;
 
@@ -19,6 +22,8 @@ public class BlackJack extends Match {
 	public static int BLACK_JACK = 2;
 	public static User userWithTurn;
 	private Baraja[] baraja;
+//	protected Vector<BlackJackUser> players;
+	//Esto no sabemos seguro que vaya aqui el vector
 
 	public BlackJack(Game game) {
 		super(game);
@@ -88,7 +93,7 @@ public class BlackJack extends Match {
 	protected void postMove(User user, JSONObject jsoMovement) throws Exception {
 		// TODO Auto-generated method stub
 		if (!jsoMovement.get("type").equals(
-				TresEnRayaMovement.class.getSimpleName())) {
+				BlackJackMovement.class.getSimpleName())) {
 			throw new Exception("Unexpected type of movement");
 		}
 		//////Si has seleccionado pedir carta comprobar restriccion
@@ -97,7 +102,7 @@ public class BlackJack extends Match {
 	}
 
 	@Override
-	protected void updateBoard(int row, int col, JSONMessage result)
+	protected void updateBoard(/*int row, int col,*/ JSONMessage result)
 			throws JSONException, IOException {
 		if (result == null) {
 			if (this.userWithTurn.equals(this.players.get(0))) {
@@ -113,6 +118,13 @@ public class BlackJack extends Match {
 		}
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	protected void updateBoard(int row, int col, JSONMessage result)
+			throws JSONException, IOException {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

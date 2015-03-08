@@ -1,4 +1,4 @@
-package com.maco.tresenraya.jsonMessages;
+package com.grande.blackjack.jsonMessages;
 
 import edu.uclm.esi.common.jsonMessages.JSONMessage;
 import edu.uclm.esi.common.jsonMessages.JSONable;
