@@ -1,6 +1,8 @@
 package com.maco.juegosEnGrupo.server.dominio;
 
 import java.io.IOException;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.Vector;
 
 import org.json.JSONException;
@@ -22,6 +24,7 @@ public class BlackJack extends Match {
 	public static int BLACK_JACK = 2;
 	public static User userWithTurn;
 	private Baraja[] baraja;
+	
 //	protected Vector<BlackJackUser> players;
 	//Esto no sabemos seguro que vaya aqui el vector
 
@@ -39,7 +42,7 @@ public class BlackJack extends Match {
 	@Override
 	protected void postAddUser(User user) {
 		// TODO Auto-generated method stub
-		if (this.players.size() == 2) {
+		if (this.players.size() == 2) {//si(hay 6 jugadores o reloj=30)-> empieza partida
 			// Ahora mismo solo con dos jugadores
 			JSONMessage jsTurn = new BlackJackWaitingMessage(
 					"Match ready. You have the turn.");
