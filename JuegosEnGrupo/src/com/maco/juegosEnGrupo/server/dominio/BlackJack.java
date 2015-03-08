@@ -91,7 +91,9 @@ public class BlackJack extends Match {
 				TresEnRayaMovement.class.getSimpleName())) {
 			throw new Exception("Unexpected type of movement");
 		}
-		//////Aqui iria algo de la baraja
+		//////Si has seleccionado pedir carta comprobar restriccion
+		/////	y dar la carta
+		/////Si has seleccionado plantarte pasar turno
 	}
 
 	@Override
