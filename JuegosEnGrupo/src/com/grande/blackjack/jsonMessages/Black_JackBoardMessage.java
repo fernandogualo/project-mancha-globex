@@ -1,9 +1,12 @@
 package com.grande.blackjack.jsonMessages;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
+import java.util.Vector;
 
 import org.apache.struts2.json.JSONException;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import edu.uclm.esi.common.jsonMessages.JSONMessage;
@@ -29,6 +32,20 @@ public class Black_JackBoardMessage extends JSONMessage {
 	@JSONable
 	private String userWithTurn;
 
+	public final JSONObject toJSONObject()  {
+		
+		JSONObject result=new JSONObject();
+		try {
+			result.put("type", "Black_JackBoardMessage");
+			result.put("baraja",baraja);
+			result.put("players",new JSONArray(players));
+		} catch (org.json.JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
 	// board+listajugadores+turno
 	public Black_JackBoardMessage(String board) {
 		super(false);
